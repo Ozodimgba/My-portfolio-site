@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Ozodimgba.github.io/My-portfolio-site",
   "name": "me",
   "private": true,
   "version": "0.0.0",
@@ -6,10 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@craco/craco": "^6.4.5",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0"
