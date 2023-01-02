@@ -2,12 +2,14 @@ import { useState } from 'react'
 import './app.css'
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoLogoTwitter } from "react-icons/io5";
+import CertCards from './components/certCards';
 
 function App() {
- console.log('reload')
+  const [color, setColor] = useState("#000000")
+  console.log(color)
  
   return (
-    <div className=" bg-black text-white flex flex-col h-[100%] p-[1%]">
+    <div className={`bg-[${color}] text-white flex flex-col h-[100%] p-[1%]`}>
     <section>
     <div className='flex flex-row width-[100%] h-[20vh] '>
     <div className='px-[1%] py-[1%] w-[22.5%] text-[0.9rem]'>
@@ -16,6 +18,7 @@ function App() {
     <div className='px-[1%] py-[1%] w-[22.5%]  text-[0.9rem]'>
     <h2>Lagos, Nigeria</h2>
     <h2>Full Stack Javascript developer</h2>
+    <h2>Solana blockchain developer</h2>
     <h2>Google cloud engineer(soon)</h2>
     </div>
     <div className='px-[1%] py-[1%] w-[55%] flex flex-row justify-between'>
@@ -31,7 +34,7 @@ function App() {
     <h2 className='pl-[10px]'>Instagram</h2>
     </div>
     
-    <img src="./me.png" className='h-[40px] rounded-[50%] w-[40px] bg-[#ffffff40] '/>
+    <img src="./me.png" className='h-[40px] flex rounded-[50%] w-[40px] bg-[#ffffff40] '/>
     
     </div>
     </div>
@@ -54,13 +57,15 @@ function App() {
   </div>
   </div>
   </section>
-
+ <section className='h-[100%]'>
+ <h4 className='text-[14rem] text-center'> Asiadiachi Ife Dayspring</h4>
+ </section>
  <section className='px-[2.5%] h-[100vh]'>
   <h1 className='text-[2rem]'>about me</h1>
   <div className='bg-white h-[5px] w-[100%] '></div>
   <div className='h-[80%] mt-[3%] flex flex-row'>
     <div className=' h-[100%] w-[45%]'>
-      <img src='./photo.jpg' className='h-[100%]'/>
+      <img src='./photo.jpg' className='h-[100%] flex -rotate-[17deg]'/>
     </div>
     <div className='text-[1.5rem] w-[55%] pr-[5%]'>
       <h1>Bio</h1>
@@ -69,23 +74,23 @@ function App() {
       Currently, I'm working a Cloud supply chain startup with a group of guys. 
         So I always needing cash. Hit me up, Ignore whatever price you see, we can negotiate. 
       I like playing video game and binging Netflix.</h3>
-      <h1>Education</h1>
-
-      <div className='w-[100%] border-[#ffffff15] border-y-[2px] h-[100px] flex flex-row '>
-     <div className='border-[#ffffff15] my-[1.5%] border-r-[2px] h-[80%] w-[25%] flex items-center '>
-      <h1 className='text-[1.2rem]'>Codecademy</h1>
-     </div>
-     <div className='flex items-center pl-[5%]'>
-        <h3>Learn Javascript</h3>
-      </div>
-      </div>
-      <h1>Hobbies</h1>
-      <button className='bg-white text-black px-[3%] rounded-[4px] w-[33%]'>
+      <button className=' text-white px-[3%] rounded-[4px] w-[33%]'>
         <h3 className='text-[1.3rem]'>View resume</h3></button>
     </div>
   </div>
  </section>
-
+ <section className='px-[2.5%] h-[50vh] flex items-center'>
+ <CertCards />
+ </section>
+ <section className='px-[2.5%] h-[100vh] flex justify-center'>
+  <div className='bg-white flex justify-center rounded-[50%] items-center h-[600px] w-[600px]'>
+ <h1 className='text-black text-[3rem]'>What do I do?</h1>
+ </div>
+ </section>
+ <section className='h-[100vh]'>
+  <button onClick={() => setColor("#1652f0")}>Click</button>
+ <img src="./banner.png" className='h-[100%] flex  w-[100%]' />
+ </section>
     </div>
     
   )

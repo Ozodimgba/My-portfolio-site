@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      rotate: {
+        '17': '17deg',
+      },
      fontFamily: {
         generalReg: ["GeneralSans-Bold", "sans-serif"],
       },
